@@ -51,8 +51,6 @@ The model is trained on the **Wisconsin Breast Cancer dataset** from Kaggle, a w
 
 ---
 
----
-
 ## ✨ Features
 
 - User-friendly web interface for submitting diagnostic data
