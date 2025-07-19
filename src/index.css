@@ -1,22 +1,33 @@
 /* Global styles */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9fafb;
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background: url('../public/bg.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
-/* Container */
-.container {
-  max-width: 600px;
-  margin: 4rem auto;
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   padding: 2rem;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Heading */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
 .container h2 {
   text-align: center;
   font-size: 1.8rem;
@@ -24,7 +35,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Form Fields */
 form div {
   display: flex;
   flex-direction: column;
@@ -52,7 +62,6 @@ input[type="number"]:focus {
   outline: none;
 }
 
-/* Button */
 button[type="submit"] {
   background-color: #6366f1;
   color: white;
@@ -70,7 +79,7 @@ button[type="submit"]:hover {
   background-color: #4f46e5;
 }
 
-/* Result Message */
+
 .result {
   text-align: center;
   margin-top: 2rem;

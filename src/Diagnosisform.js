@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import './index.css'; // Make sure this is imported
+import './index.css'; 
 
 const DiagnosisForm = () => {
   const [formData, setFormData] = useState({
@@ -42,35 +42,37 @@ const DiagnosisForm = () => {
   };
 
   return (
-    <div className="container">
-      <h2>Breast Cancer Diagnosis</h2>
-      <form onSubmit={handleSubmit}>
-        {Object.keys(formData).map((key) => (
-          <div key={key}>
-            <label>{key.replaceAll("_", " ")}</label>
-            <input
-              type="number"
-              step="any"
-              name={key}
-              value={formData[key]}
-              onChange={handleChange}
-              required
-            />
-          </div>
-        ))}
-        <button type="submit">Predict</button>
-      </form>
+    <div className="page-wrapper">
+      <div className="container">
+        <h2>Breast Cancer Diagnosis</h2>
+        <form onSubmit={handleSubmit}>
+          {Object.keys(formData).map((key) => (
+            <div key={key}>
+              <label>{key.replaceAll("_", " ")}</label>
+              <input
+                type="number"
+                step="any"
+                name={key}
+                value={formData[key]}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          ))}
+          <button type="submit">Predict</button>
+        </form>
 
-      {prediction && (
-        <p className="result success">
-          <strong>Prediction:</strong> {prediction}
-        </p>
-      )}
-      {error && (
-        <p className="result error">
-          <strong>Error:</strong> {error}
-        </p>
-      )}
+        {prediction && (
+          <p className="result success">
+            <strong>Prediction:</strong> {prediction}
+          </p>
+        )}
+        {error && (
+          <p className="result error">
+            <strong>Error:</strong> {error}
+          </p>
+        )}
+      </div>
     </div>
   );
 };
