@@ -3,18 +3,18 @@ import axios from "axios";
 import './index.css'; 
 
 const DiagnosisForm = () => {
-  const [formData, setFormData] = useState({
-    mean_radius: "",
-    mean_texture: "",
-    mean_perimeter: "",
-    mean_area: "",
-    mean_smoothness: "",
-    mean_compactness: "",
-    mean_concavity: "",
-    mean_concave_points: "",
-    mean_symmetry: "",
-    mean_fractal_dimension: ""
-  });
+      const [formData, setFormData] = useState({
+      radius_mean: "",
+      texture_mean: "",
+      smoothness_mean: "",
+      compactness_mean: "",
+      symmetry_mean: "",
+      radius_se: "",
+      smoothness_se: "",
+      compactness_se: "",
+      radius_worst: "",
+      texture_worst: ""
+    });
 
   const [prediction, setPrediction] = useState(null);
   const [error, setError] = useState(null);
