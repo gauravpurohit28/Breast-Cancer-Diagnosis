@@ -31,7 +31,7 @@ const DiagnosisForm = () => {
     const features = Object.values(formData).map(parseFloat);
 
     try {
-      const res = await axios.post("http://127.0.0.1:5000/predict", { features });
+      const res = await axios.post("https://cancer-backend-wlc9.onrender.com/predict", { features });
       setPrediction(res.data.prediction === 1 ? "Malignant" : "Benign");
       setError(null);
     } catch (err) {
